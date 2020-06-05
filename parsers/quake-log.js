@@ -9,8 +9,11 @@ const KILL = 'Kill';
 const eventParser = /^([ \d:]+)(\w+)/;
 const killParser = /^([ \d:]+)(\w+)(:[ \d]+: *)([ \w<>]+)( killed )([ \w]+)( by .+)$/;
 
+let id = 0;
+
 function emptyGame() {
     return {
+        id : ++id,
         total_kills: 0,
         players: [],
         kills: {},
