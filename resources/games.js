@@ -11,7 +11,7 @@ async function find(request, response, next) {
     if (game && game.length) {
         return response.json(game[0]).end();
     }
-    response.status(400).json({status:'error', message: 'Game not found'}).end();
+    response.status(400).json({status:'error', message: `Game ${id}: not found`}).end();
 }
 
 
